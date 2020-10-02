@@ -1,6 +1,6 @@
 ﻿using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfileSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfileSettings
 {
     /// <summary>
     /// Broker regulatory settings contract

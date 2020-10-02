@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using MarginTrading.AssetService.Contracts.Audit;
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Audit;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     public interface IAuditApi
     {

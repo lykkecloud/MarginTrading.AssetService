@@ -1,8 +1,8 @@
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.ProductCategories
+namespace Lykke.MarginTrading.AssetService.Contracts.ProductCategories
 {
     [MessagePackObject]
     public class ProductCategoryChangedEvent : EntityChangedEvent<ProductCategoryContract>

@@ -3,10 +3,10 @@
 
 using System;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Enums;
+using Lykke.MarginTrading.AssetService.Contracts.Enums;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.MarketSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.MarketSettings
 {
     [MessagePackObject]
     public class MarketSettingsChangedEvent

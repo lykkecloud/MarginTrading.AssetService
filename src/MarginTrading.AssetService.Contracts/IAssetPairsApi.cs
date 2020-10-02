@@ -5,12 +5,12 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.AssetPair;
-using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.Enums;
+using Lykke.MarginTrading.AssetService.Contracts.AssetPair;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Enums;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     /// <summary>
     /// Asset pairs management

@@ -1,7 +1,7 @@
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.TickFormula
+namespace Lykke.MarginTrading.AssetService.Contracts.TickFormula
 {
     [MessagePackObject]
     public class TickFormulaChangedEvent : EntityChangedEvent<TickFormulaContract>

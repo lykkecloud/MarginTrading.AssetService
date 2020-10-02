@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     /// <summary>
     /// MT Core service maintenance management

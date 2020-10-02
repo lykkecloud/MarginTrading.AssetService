@@ -4,7 +4,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace MarginTrading.AssetService.Contracts.Enums
+namespace Lykke.MarginTrading.AssetService.Contracts.Enums
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public enum OrderDirectionContract

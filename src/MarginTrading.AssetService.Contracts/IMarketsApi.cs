@@ -5,10 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Market;
+using Lykke.MarginTrading.AssetService.Contracts.Market;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     /// <summary>
     /// Markets management

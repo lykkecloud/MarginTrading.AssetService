@@ -1,7 +1,7 @@
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.AssetTypes
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetTypes
 {
     [MessagePackObject]
     public class AssetTypeChangedEvent : EntityChangedEvent<AssetTypeContract>

@@ -1,4 +1,4 @@
-﻿namespace MarginTrading.AssetService.Contracts.Common
+﻿namespace Lykke.MarginTrading.AssetService.Contracts.Common
 {
     /// <summary>
     /// Response which holds error code

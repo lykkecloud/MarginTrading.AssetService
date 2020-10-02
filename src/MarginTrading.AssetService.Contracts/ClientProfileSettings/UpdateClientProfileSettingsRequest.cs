@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfileSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfileSettings
 {
     /// <summary>
     /// Request model to update regulatory settings

@@ -3,10 +3,10 @@
 
 using System.Threading.Tasks;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Candles;
+using Lykke.MarginTrading.AssetService.Contracts.Candles;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     /// <summary>
     /// The candles sharding shared settings

@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
-using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.TickFormula;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.TickFormula;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     public interface ITickFormulasApi
     {

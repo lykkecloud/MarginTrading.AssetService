@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace MarginTrading.AssetService.Contracts.AssetTypes
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetTypes
 {
     /// <summary>
     /// Request model to update asset type

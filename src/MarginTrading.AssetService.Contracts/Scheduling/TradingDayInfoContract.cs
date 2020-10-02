@@ -3,7 +3,7 @@
 
 using System;
 
-namespace MarginTrading.AssetService.Contracts.Scheduling
+namespace Lykke.MarginTrading.AssetService.Contracts.Scheduling
 {
     /// <summary>
     /// Current trading day info

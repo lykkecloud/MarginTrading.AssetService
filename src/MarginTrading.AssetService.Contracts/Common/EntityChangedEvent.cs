@@ -1,9 +1,9 @@
 using System;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Enums;
+using Lykke.MarginTrading.AssetService.Contracts.Enums;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.Common
+namespace Lykke.MarginTrading.AssetService.Contracts.Common
 {
     [MessagePackObject]
     public class EntityChangedEvent<T>

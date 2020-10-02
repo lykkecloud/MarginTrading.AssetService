@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.Products
+namespace Lykke.MarginTrading.AssetService.Contracts.Products
 {
     public class GetProductsResponse
     {

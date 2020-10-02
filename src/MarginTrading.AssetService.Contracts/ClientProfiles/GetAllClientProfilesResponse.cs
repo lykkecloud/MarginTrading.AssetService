@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfiles
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfiles
 {
     /// <summary>
     /// Response model to get all client profiles

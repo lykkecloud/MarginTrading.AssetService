@@ -3,7 +3,7 @@
 
 using JetBrains.Annotations;
 
-namespace MarginTrading.AssetService.Contracts.Rates
+namespace Lykke.MarginTrading.AssetService.Contracts.Rates
 {
     public class OrderExecutionRateContract
     {

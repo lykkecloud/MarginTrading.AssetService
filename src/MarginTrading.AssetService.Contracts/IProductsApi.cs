@@ -1,11 +1,11 @@
 using System.Threading.Tasks;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.ErrorCodes;
-using MarginTrading.AssetService.Contracts.Products;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.ErrorCodes;
+using Lykke.MarginTrading.AssetService.Contracts.Products;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     public interface IProductsApi
     {

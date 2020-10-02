@@ -1,4 +1,4 @@
-namespace MarginTrading.AssetService.Contracts.ErrorCodes
+namespace Lykke.MarginTrading.AssetService.Contracts.ErrorCodes
 {
     public enum CurrenciesErrorCodesContract
     {

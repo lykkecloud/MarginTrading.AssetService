@@ -1,7 +1,7 @@
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfileSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfileSettings
 {
     [MessagePackObject]
     public class ClientProfileSettingsChangedEvent : EntityChangedEvent<ClientProfileSettingsContract>

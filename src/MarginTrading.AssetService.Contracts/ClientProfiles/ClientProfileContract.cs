@@ -1,6 +1,6 @@
 ﻿using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfiles
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfiles
 {
     /// <summary>
     /// Contract for client profile

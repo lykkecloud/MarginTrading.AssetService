@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.Products
+namespace Lykke.MarginTrading.AssetService.Contracts.Products
 {
     [MessagePackObject()]
     public class ProductContract

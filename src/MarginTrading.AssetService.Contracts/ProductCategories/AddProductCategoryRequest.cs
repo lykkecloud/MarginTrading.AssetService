@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using MarginTrading.AssetService.Contracts.Core;
+using Lykke.MarginTrading.AssetService.Contracts.Core;
 
-namespace MarginTrading.AssetService.Contracts.ProductCategories
+namespace Lykke.MarginTrading.AssetService.Contracts.ProductCategories
 {
     public class AddProductCategoryRequest : UserRequest
     {

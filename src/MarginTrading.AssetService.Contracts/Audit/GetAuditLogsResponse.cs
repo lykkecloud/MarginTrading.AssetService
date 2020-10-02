@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.Audit
+namespace Lykke.MarginTrading.AssetService.Contracts.Audit
 {
     /// <summary>
     /// Response model for audit logs

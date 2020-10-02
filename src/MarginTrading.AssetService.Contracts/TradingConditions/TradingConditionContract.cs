@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.TradingConditions
+namespace Lykke.MarginTrading.AssetService.Contracts.TradingConditions
 {
     public class TradingConditionContract
     {

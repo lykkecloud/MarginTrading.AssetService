@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MarginTrading.AssetService.Contracts.AssetTypes
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetTypes
 {
     /// <summary>
     /// Request to add asset type

@@ -4,7 +4,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace MarginTrading.AssetService.Contracts.AssetPair
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetPair
 {
     [JsonConverter(typeof(StringEnumConverter))]
     public enum FreezeReasonContract

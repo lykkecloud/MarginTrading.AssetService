@@ -1,7 +1,7 @@
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.Currencies
+namespace Lykke.MarginTrading.AssetService.Contracts.Currencies
 {
     [MessagePackObject]
     public class CurrencyChangedEvent : EntityChangedEvent<CurrencyContract>

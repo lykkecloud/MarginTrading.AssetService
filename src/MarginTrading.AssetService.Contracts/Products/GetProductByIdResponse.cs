@@ -1,7 +1,7 @@
-using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.ErrorCodes;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.ErrorCodes;
 
-namespace MarginTrading.AssetService.Contracts.Products
+namespace Lykke.MarginTrading.AssetService.Contracts.Products
 {
     public class GetProductByIdResponse : ErrorCodeResponse<ProductsErrorCodesContract>
     {

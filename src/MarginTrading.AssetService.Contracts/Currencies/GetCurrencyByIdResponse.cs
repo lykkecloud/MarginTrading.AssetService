@@ -1,7 +1,7 @@
-using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.ErrorCodes;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.ErrorCodes;
 
-namespace MarginTrading.AssetService.Contracts.Currencies
+namespace Lykke.MarginTrading.AssetService.Contracts.Currencies
 {
     public class GetCurrencyByIdResponse : ErrorCodeResponse<CurrenciesErrorCodesContract>
     {

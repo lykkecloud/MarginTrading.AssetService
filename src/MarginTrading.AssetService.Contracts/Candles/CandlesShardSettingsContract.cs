@@ -3,7 +3,7 @@
 
 using JetBrains.Annotations;
 
-namespace MarginTrading.AssetService.Contracts.Candles
+namespace Lykke.MarginTrading.AssetService.Contracts.Candles
 {
     /// <summary>
     /// The candles publication shard settings

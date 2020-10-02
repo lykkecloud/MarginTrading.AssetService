@@ -3,12 +3,12 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.ErrorCodes;
-using MarginTrading.AssetService.Contracts.MarketSettings;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.ErrorCodes;
+using Lykke.MarginTrading.AssetService.Contracts.MarketSettings;
 using Refit;
 
-namespace MarginTrading.AssetService.Contracts
+namespace Lykke.MarginTrading.AssetService.Contracts
 {
     /// <summary>
     /// Api for market settings

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.MarketSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.MarketSettings
 {
     /// <summary>
     /// Market settings contract

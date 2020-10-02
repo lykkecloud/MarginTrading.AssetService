@@ -1,7 +1,7 @@
-﻿using MarginTrading.AssetService.Contracts.Common;
-using MarginTrading.AssetService.Contracts.ErrorCodes;
+﻿using Lykke.MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.ErrorCodes;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfileSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfileSettings
 {
     /// <summary>
     /// Response model to get client profile settings by ids

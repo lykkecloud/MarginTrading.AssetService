@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MarginTrading.AssetService.Contracts.Common
+namespace Lykke.MarginTrading.AssetService.Contracts.Common
 {
     public class UserRequest
     {

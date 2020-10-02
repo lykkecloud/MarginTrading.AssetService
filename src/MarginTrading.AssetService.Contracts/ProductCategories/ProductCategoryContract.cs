@@ -1,6 +1,6 @@
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.ProductCategories
+namespace Lykke.MarginTrading.AssetService.Contracts.ProductCategories
 {
     [MessagePackObject]
     public class ProductCategoryContract

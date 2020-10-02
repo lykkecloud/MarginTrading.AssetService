@@ -3,7 +3,7 @@
 
 using System;
 
-namespace MarginTrading.AssetService.Contracts.Audit
+namespace Lykke.MarginTrading.AssetService.Contracts.Audit
 {
     /// <summary>
     /// Contract for audit

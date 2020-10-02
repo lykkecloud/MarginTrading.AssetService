@@ -2,10 +2,10 @@
 // See the LICENSE file in the project root for more information.
 
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Enums;
+using Lykke.MarginTrading.AssetService.Contracts.Enums;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.AssetPair
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetPair
 {
     /// <summary>
     /// AssetPair contract

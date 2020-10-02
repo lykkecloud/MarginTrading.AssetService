@@ -4,7 +4,7 @@
 using System;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.AssetPair
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetPair
 {
     [MessagePackObject]
     public class FreezeInfoContract

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MarginTrading.AssetService.Contracts.MarketSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.MarketSettings
 {
     public class AddMarketSettingsRequest
     {

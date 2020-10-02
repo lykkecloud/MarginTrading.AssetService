@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.Scheduling
+namespace Lykke.MarginTrading.AssetService.Contracts.Scheduling
 {
     public class CompiledScheduleContract
     {

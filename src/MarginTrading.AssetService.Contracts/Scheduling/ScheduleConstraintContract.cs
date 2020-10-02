@@ -3,7 +3,7 @@
 
 using System;
 
-namespace MarginTrading.AssetService.Contracts.Scheduling
+namespace Lykke.MarginTrading.AssetService.Contracts.Scheduling
 {
     /// <summary>
     /// 3 cases are valid: {Time}, {Date & Time}, {DayOfWeek & Time}

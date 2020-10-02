@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.TickFormula
+namespace Lykke.MarginTrading.AssetService.Contracts.TickFormula
 {
     public class GetAllTickFormulasResponse
     {

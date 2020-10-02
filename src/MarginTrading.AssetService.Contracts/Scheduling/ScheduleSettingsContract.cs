@@ -4,7 +4,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.Scheduling
+namespace Lykke.MarginTrading.AssetService.Contracts.Scheduling
 {
     /// <summary>
     /// Start and End constraints must be of the same type.

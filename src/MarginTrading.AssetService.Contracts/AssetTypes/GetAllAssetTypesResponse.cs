@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.AssetTypes
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetTypes
 {
     /// <summary>
     /// Response model to get all asset types

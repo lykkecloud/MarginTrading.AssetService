@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MarginTrading.AssetService.Contracts.AssetTypes
+namespace Lykke.MarginTrading.AssetService.Contracts.AssetTypes
 {
     /// <summary>
     /// Contract for asset type

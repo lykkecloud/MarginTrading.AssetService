@@ -1,7 +1,7 @@
 ﻿// Copyright (c) 2019 Lykke Corp.
 // See the LICENSE file in the project root for more information.
 
-namespace MarginTrading.AssetService.Contracts.Market
+namespace Lykke.MarginTrading.AssetService.Contracts.Market
 {
     public class MarketContract
     {

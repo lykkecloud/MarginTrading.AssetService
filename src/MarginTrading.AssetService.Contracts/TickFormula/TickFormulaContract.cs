@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.TickFormula
+namespace Lykke.MarginTrading.AssetService.Contracts.TickFormula
 {
     [MessagePackObject]
     public class TickFormulaContract

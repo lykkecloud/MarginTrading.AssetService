@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
 
-namespace MarginTrading.AssetService.Contracts.Candles
+namespace Lykke.MarginTrading.AssetService.Contracts.Candles
 {
     /// <summary>
     /// Candles producer sharding settings

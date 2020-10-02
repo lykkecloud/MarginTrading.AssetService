@@ -1,9 +1,9 @@
 ﻿// Copyright (c) 2019 Lykke Corp.
 // See the LICENSE file in the project root for more information.
 
-using MarginTrading.AssetService.Contracts.Enums;
+using Lykke.MarginTrading.AssetService.Contracts.Enums;
 
-namespace MarginTrading.AssetService.Contracts.Routes
+namespace Lykke.MarginTrading.AssetService.Contracts.Routes
 {
     public class MatchingEngineRouteContract
     {

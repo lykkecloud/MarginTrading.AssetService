@@ -1,6 +1,6 @@
-using MarginTrading.AssetService.Contracts.Core;
+using Lykke.MarginTrading.AssetService.Contracts.Core;
 
-namespace MarginTrading.AssetService.Contracts.Products
+namespace Lykke.MarginTrading.AssetService.Contracts.Products
 {
     public class DeleteProductRequest : UserRequest
     {

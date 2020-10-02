@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace MarginTrading.AssetService.Contracts.MarketSettings
+namespace Lykke.MarginTrading.AssetService.Contracts.MarketSettings
 {
     public class GetAllMarketSettingsResponse
     {

@@ -1,6 +1,6 @@
 using MessagePack;
 
-namespace MarginTrading.AssetService.Contracts.Currencies
+namespace Lykke.MarginTrading.AssetService.Contracts.Currencies
 {
     [MessagePackObject]
     public class CurrencyContract

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace MarginTrading.AssetService.Contracts.ClientProfiles
+namespace Lykke.MarginTrading.AssetService.Contracts.ClientProfiles
 {
     /// <summary>
     /// Request to add client profile

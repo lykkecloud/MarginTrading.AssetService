@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using MarginTrading.AssetService.Contracts.Common;
+using Lykke.MarginTrading.AssetService.Contracts.Common;
 
-namespace MarginTrading.AssetService.Contracts.Currencies
+namespace Lykke.MarginTrading.AssetService.Contracts.Currencies
 {
     public class AddCurrencyRequest : UserRequest
     {

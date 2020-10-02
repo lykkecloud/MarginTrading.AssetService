@@ -3,9 +3,9 @@
 
 using System;
 using JetBrains.Annotations;
-using MarginTrading.AssetService.Contracts.Enums;
+using Lykke.MarginTrading.AssetService.Contracts.Enums;
 
-namespace MarginTrading.AssetService.Contracts.Messages
+namespace Lykke.MarginTrading.AssetService.Contracts.Messages
 {
     public class SettingsChangedEvent
     {
