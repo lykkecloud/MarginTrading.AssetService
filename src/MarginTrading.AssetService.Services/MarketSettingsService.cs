@@ -120,15 +120,31 @@ namespace MarginTrading.AssetService.Services
             if (!valid)
                 return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.InvalidTimezone);
 
-            if (model.Open.TotalHours >= 24 || model.Close.TotalHours >= 24 || (model.Open > model.Close && model.Close != TimeSpan.Zero))
+            if (model.Open.Length != model.Close.Length)
                 return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.InvalidOpenAndCloseHours);
 
-            var openUtc = model.Open.ShiftToUtc(timezone);
-            var closeUtc = model.Close.ShiftToUtc(timezone);
-
-            if (openUtc.TotalHours >= 24 || closeUtc.TotalHours >= 24 ||
-                openUtc.TotalHours < 0 || closeUtc.TotalHours < 0)
-                return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.OpenAndCloseWithAppliedTimezoneMustBeInTheSameDay);
+            for (int i = 0; i < model.Open.Length; i++)
+            {
+                var open = model.Open[i];
+                var close = model.Close[i];
+                
+                if (open.TotalHours >= 24 || close.TotalHours >= 24 || open > close && close != TimeSpan.Zero)
+                    return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.InvalidOpenAndCloseHours);
+                
+                var openUtc = open.ShiftToUtc(timezone);
+                var closeUtc = close.ShiftToUtc(timezone);
+                
+                if (openUtc.TotalHours >= 24 || closeUtc.TotalHours >= 24 || openUtc.TotalHours < 0 || closeUtc.TotalHours < 0)
+                    return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.OpenAndCloseWithAppliedTimezoneMustBeInTheSameDay);
+                
+                var firstTradingSession = i == 0;
+                if (!firstTradingSession)
+                {
+                    var previousClose = model.Close[i - 1];
+                    if (open <= previousClose)
+                        return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.InvalidOpenAndCloseHours);
+                }
+            }
 
             if (model.DividendsLong < 0 || model.DividendsLong > 100)
                 return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.InvalidDividendsLongValue);
@@ -144,12 +160,10 @@ namespace MarginTrading.AssetService.Services
 
             //This is the current day taking into account the timezone
             var currentDay = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, TZConvert.GetTimeZoneInfo(currentMarketSettings.Timezone));
-            var newHolidays = model.Holidays.Select(x => x.Date.Date).Except(currentMarketSettings.Holidays);
-
-            //Validate if we try to add holiday for already started trading day
-            if (newHolidays.Contains(currentDay.Date) && currentMarketSettings.Open <= currentDay.TimeOfDay &&
+            // @atarutin: I assume we cannot change current day holiday schedule if it has already started, even if it is multi-session
+            if (model.HolidaySchedule.ContainsDay(currentDay) && currentMarketSettings.Open.First() <= currentDay.TimeOfDay &&
                 //Close will be Zero when it is set to 00h next day
-                (currentMarketSettings.Close >= currentDay.TimeOfDay || model.Close == TimeSpan.Zero))
+                (currentMarketSettings.Close.Last() >= currentDay.TimeOfDay || model.Close.Last() == TimeSpan.Zero))
             {
                 return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.TradingDayAlreadyStarted);
             }

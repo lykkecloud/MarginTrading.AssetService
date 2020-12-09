@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Common.Log;
 using Lykke.Snow.Common.Extensions;
+using Lykke.Snow.Common.Holidays;
 using Lykke.Snow.Mdm.Contracts.Api;
 using Lykke.Snow.Mdm.Contracts.Models.Contracts;
 using MarginTrading.AssetService.Core.Domain;
@@ -46,8 +47,7 @@ namespace MarginTrading.AssetService.Services
             {
                 //We need only platform settings
                 if (marketId == _platformSettings.PlatformMarketId)
-                    return MapPlatformScheduleSettings(brokerSettings.Open, brokerSettings.Close, brokerSettings.Timezone,
-                        brokerSettings.Holidays);
+                    return MapPlatformScheduleSettings(brokerSettings.Open, brokerSettings.Close, brokerSettings.Timezone, brokerSettings.HolidaySchedule.Holidays);
 
                 var marketSettingsById = await _marketSettingsRepository.GetByIdAsync(marketId);
                 if (marketSettingsById == null)
@@ -57,8 +57,7 @@ namespace MarginTrading.AssetService.Services
                     marketSettingsById.Close, marketSettingsById.Timezone, marketSettingsById.Holidays);
             }
 
-            var platformSettings = MapPlatformScheduleSettings(brokerSettings.Open, brokerSettings.Close, brokerSettings.Timezone,
-                brokerSettings.Holidays);
+            var platformSettings = MapPlatformScheduleSettings(brokerSettings.Open, brokerSettings.Close, brokerSettings.Timezone, brokerSettings.HolidaySchedule.Holidays);
             var allMarketSettings = await _marketSettingsRepository.GetAllMarketSettingsAsync();
 
             var result = allMarketSettings
@@ -82,7 +81,7 @@ namespace MarginTrading.AssetService.Services
             return result.BrokerSettings;
         }
 
-        private List<ScheduleSettings> MapMarketScheduleSettings(string marketId, TimeSpan open, TimeSpan close, string timezone, IEnumerable<DateTime> holidays)
+        private List<ScheduleSettings> MapMarketScheduleSettings(string marketId, TimeSpan open, TimeSpan close, string timezone, IEnumerable<Holiday> holidays)
         {
             var result = MapHolidays(marketId, holidays, null);
             result.Add(MapWeekendHolidays(marketId, null));
@@ -91,7 +90,7 @@ namespace MarginTrading.AssetService.Services
             return result;
         }
 
-        private List<ScheduleSettings> MapPlatformScheduleSettings(TimeSpan open, TimeSpan close, string timezone, IEnumerable<DateTime> holidays)
+        private List<ScheduleSettings> MapPlatformScheduleSettings(TimeSpan open, TimeSpan close, string timezone, IEnumerable<Holiday> holidays)
         {
             var assetPairRegex = ".*";
             var platformId = _platformSettings.PlatformMarketId;
@@ -118,7 +117,7 @@ namespace MarginTrading.AssetService.Services
             return settings;
         }
 
-        private List<ScheduleSettings> MapHolidays(string marketId, IEnumerable<DateTime> holidays, string assetPairRegex)
+        private List<ScheduleSettings> MapHolidays(string marketId, IEnumerable<Holiday> holidays, string assetPairRegex)
         {
             var result = new List<ScheduleSettings>();
 
@@ -126,13 +125,13 @@ namespace MarginTrading.AssetService.Services
             {
                 var start = new ScheduleConstraint
                 {
-                    Date = holiday.Date
+                    Date = holiday.Timestamp.Date
                 };
                 var end = new ScheduleConstraint
                 {
-                    Date = holiday.Date.AddDays(1)
+                    Date = holiday.Timestamp.Date.AddDays(1)
                 };
-                var id = $"{marketId}_holiday_{holiday.Date}";
+                var id = $"{marketId}_holiday_{holiday.Timestamp.Date}";
                 result.Add(ScheduleSettings.Create(id, marketId, start, end, assetPairRegex));
             }
 

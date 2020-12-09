@@ -22,13 +22,13 @@ namespace MarginTrading.AssetService.SqlRepositories.Entities
 
         public decimal Dividends871M { get; set; }
 
-        public TimeSpan Open { get; set; }
+        public TimeSpan[] Open { get; set; }
 
-        public TimeSpan Close { get; set; }
+        public TimeSpan[] Close { get; set; }
 
         public string Timezone { get; set; }
 
-        public virtual List<HolidayEntity> Holidays { get; set; }
+        public HolidayScheduleEntity HolidaySchedule { get; set; }
 
         public static MarketSettingsEntity Create(MarketSettings model)
         {
@@ -43,11 +43,7 @@ namespace MarginTrading.AssetService.SqlRepositories.Entities
                 Open = model.Open,
                 Timezone = model.Timezone,
                 NormalizedName = model.Name.ToLower(),
-                Holidays = model.Holidays.Distinct().Select(date => new HolidayEntity
-                {
-                    Date = date.Date,
-                    MarketSettingsId = model.Id
-                }).ToList(),
+                HolidaySchedule = new HolidayScheduleEntity {Schedule = model.HolidaySchedule}
             };
         }
 
@@ -61,11 +57,7 @@ namespace MarginTrading.AssetService.SqlRepositories.Entities
             Open = model.Open;
             Timezone = model.Timezone;
             NormalizedName = model.Name.ToLower();
-            Holidays = model.Holidays.Distinct().Select(date => new HolidayEntity
-            {
-                Date = date.Date,
-                MarketSettingsId = model.Id
-            }).ToList();
+            HolidaySchedule = new HolidayScheduleEntity {Schedule = model.HolidaySchedule};
         }
     }
 }

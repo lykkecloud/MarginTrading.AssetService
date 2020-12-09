@@ -31,8 +31,7 @@ namespace MarginTrading.AssetService.SqlRepositories.Repositories
         {
             using (var context = _contextFactory.CreateDataContext())
             {
-                var existing = await context.MarketSettings
-                    .FindAsync(id);
+                var existing = await context.MarketSettings.FindAsync(id);
 
                 if (existing == null)
                     return null;
@@ -90,7 +89,7 @@ namespace MarginTrading.AssetService.SqlRepositories.Repositories
             {
                 var existing = await context.MarketSettings.FindAsync(model.Id);
 
-                if(existing == null)
+                if (existing == null)
                     return new Result<MarketSettingsErrorCodes>(MarketSettingsErrorCodes.MarketSettingsDoNotExist);
 
                 existing.MapFromDomain(model);
@@ -191,7 +190,7 @@ namespace MarginTrading.AssetService.SqlRepositories.Repositories
                 Close = entity.Close,
                 Open = entity.Open,
                 Timezone = entity.Timezone,
-                Holidays = entity.Holidays.Select(x => x.Date).ToList(),
+                HolidaySchedule = entity.HolidaySchedule.Schedule,
             };
         }
     }
